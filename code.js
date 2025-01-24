@@ -15,9 +15,12 @@ function binarySearch(list, element) {
         
     }
 
-    while(list[mid]===list[mid-1]&&counter!=0){
+    while(list[mid]===list[mid-1]){
+        if(counter!=0){
             counter-=1;
             mid-=1;
+        }
+        mid-=1;
     }
     if((list[first]==list[last]&&list.length!=0)){
         return counter;
