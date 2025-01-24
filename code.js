@@ -17,7 +17,7 @@ function binarySearch(list, element) {
         }
         
     }
-    if((list[first]==list[last])){
+    if((list[first]==list[last]&&list.length!=0)){
         return counter;
     }
     else if(element==list[mid]){
@@ -29,6 +29,11 @@ function binarySearch(list, element) {
     else if(element > list[mid]){
         tracker();
         return binarySearch(list.slice(mid,last+1), element)+counter;
+    }
+    else{
+        return -1;
+    }
+}
     }
     else{
         return -1;
