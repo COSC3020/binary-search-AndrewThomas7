@@ -1,6 +1,3 @@
-
-
-
 function binarySearch(list, element) {
     var first = 0;
     var last = list.length-1;
@@ -16,6 +13,11 @@ function binarySearch(list, element) {
             counter+=mid;
         }
         
+    }
+
+    while(list[mid]==list[mid-1]){
+        counter-=1;
+        mid-=1;
     }
     if((list[first]==list[last]&&list.length!=0)){
         return counter;
