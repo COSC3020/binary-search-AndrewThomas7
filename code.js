@@ -2,11 +2,14 @@ function binarySearch(list, element) {
 
     function _binarySearch(list,element,first,mid,last){
         
-        while(list[mid]===list[mid-1]){
+        while(list[mid]===list[mid-1]&&list.length!=0){
              mid-=1;
 
         }
-        if(element==list[mid]||list[first]==list[last]){
+        if((list[first]==list[last]&&list.length!=0)){
+            return first;
+        }
+        else if(element==list[mid]){
             return mid;
         }
         else if(element<list[mid]){
